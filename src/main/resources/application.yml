@@ -1,0 +1,33 @@
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  servlet:
+    multipart:
+      max-file-size: 1000000000000
+      max-request-size: 1000000000000
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://106.14.212.90:3306/ycSong?useUnicode=true&characterEncoding=UTF-8&&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    host: 106.14.212.90
+    port: 6379
+    password: Syc200528
+
+
+mybatis:
+  type-aliases-package: com.xitianfo.entity
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+
+    map-underscore-to-camel-case: true
+
+server:
+  port: 8080
+
+
